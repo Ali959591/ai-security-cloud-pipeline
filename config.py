@@ -12,6 +12,7 @@ class SSHConfig:
     port: int = 22
     user: str = "ubuntu"
     key_path: Path | None = None
+    password: str | None = None
     remote_workdir: str = "~/ai-runs"
 
 
@@ -31,6 +32,8 @@ class SecurityConfig:
     listen_port: int = 8080
     upstream_url: str = "http://localhost:11434"
     block_on_injection: bool = True
+    risk_threshold: float = 0.35
+    scan_history_path: Path = field(default_factory=lambda: Path("scan_history.json"))
 
 
 @dataclass
