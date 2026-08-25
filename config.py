@@ -32,7 +32,7 @@ class SecurityConfig:
     listen_port: int = 8080
     upstream_url: str = "http://localhost:11434"
     block_on_injection: bool = True
-    risk_threshold: float = 0.35
+    risk_threshold: float = 0.30
     scan_history_path: Path = field(default_factory=lambda: Path("scan_history.json"))
 
 
