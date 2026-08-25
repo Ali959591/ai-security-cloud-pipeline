@@ -1,5 +1,3 @@
-"""Application configuration for the AI Security Cloud CLI."""
-
 from dataclasses import dataclass, field
 from pathlib import Path
 
